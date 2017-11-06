@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>积分商城确认订单</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/jquery.raty.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/mall_Friday.css" />
+    <link rel="stylesheet" href="css/layer.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="index_title">
+        <div class="index_title_box clearfix">
+          <div class="index_title_box_city fl">
+            <!--切换城市-->
+            <div class="control-label">所在城市：<span class="select_now">北京朝阳区</span><i></i></div>
+            <div class="control-group" style="display:none;">
+              <div class="advice">建议您的收货地址：<span>哈密市伊州区</span></div>
+              <div class="controls">
+                <select name="location_p" id="location_p"></select> <span>省</span>
+                <select name="location_c" id="location_c"></select> <span>市</span>
+                <select name="location_a" id="location_a"></select> <span>区</span>
+                <script src="js/region_select.js"></script>
+                <script type="text/javascript">
+                  new PCAS('location_p', 'location_c', 'location_a', '广东省', '', '');
+                </script>
+              </div>
+            </div>
+          </div>
+          <!--顶部详情-->
+           <div class="index_title_box_right  fr">
+            <ul>
+              <li class="fl">您好，<span>17701269859</span>
+                <a href="wxt_account-password_logging.html ">退出 </a>
+              </li>
+              <li class="fl">
+                <a href="my_order.html ">我的订单</a>
+              </li>
+              <li class="fl">
+                <a href="my_message.html">我的消息</a>
+              </li>
+              <li class="fl">
+                <a href="merchant.html">我是商家</a>
+              </li>
+              <li class="fl"><i></i>
+                <a href="tel:400-800-8820">400-800-8820</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="affirm_bdb">
+      <div class="submitOrder_hd">
+        <span class="submitOrder_hd_logo"><a href="index.html"><img src="images/logo.png"/></a></span>
+        <p><span class="submitOrder_hd_zhifu">确认兑换信息</span></p>
+      </div>
+      </div>
+      <div class="jforder_bd">
+        <h3>收货人信息<a href="wxt_add_new-address.html">使用新地址</a></h3>
+        <div class="jforder_bd_add">
+          <ul>
+            <li >
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput"></span>
+            <span class="jforder_bd_radioads">但小兵 北京 北京市 昌平区 天通苑明天第一城4号楼101 固定电话010-21541589</span>     
+          </label>
+              <span class="jforder_bd_site">
+                <a class="jforder_bd_site_set">设置为默认地址</a>
+            <a href="#">修改</a>
+            <a href="#" class="jforder_bd_del">删除</a>
+          </span>
+            </li>
+            <li>
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput" ></span>但小小 北京 北京市 昌平区 天通苑明天第一城4号楼101 手机15032203561             
+          </label>
+              <span class="jforder_bd_site">
+              <a class="jforder_bd_site_set">设置为默认地址</a>
+              <a href="#">修改</a>
+              <a href="#" class="jforder_bd_del">删除</a>
+            </span>
+            </li>
+            <li>
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput" ></span>但兵兵 北京 北京市 昌平区 天通苑明天第一城4号楼101  手机15032203562            
+          </label>
+              <span class="jforder_bd_site">
+              <a class="jforder_bd_site_set">设置为默认地址</a>
+              <a href="#">修改</a>
+              <a href="#" class="jforder_bd_del">删除</a>
+            </span>
+            </li>
+            <li>
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput" ></span>但兵 北京 北京市 昌平区 天通苑明天第一城4号楼101 手机15032203563            
+          </label>
+              <span class="jforder_bd_site">
+              <a class="jforder_bd_site_set">设置为默认地址</a>
+              <a href="#">修改</a>
+              <a href="#" class="jforder_bd_del">删除</a>
+          </span>
+            </li>
+             <li >
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput"></span>
+            <span class="jforder_bd_radioads">但小兵 北京 北京市 昌平区 天通苑明天第一城4号楼101 固定电话010-21541589</span>        
+          </label>
+              <span class="jforder_bd_site">
+                <a class="jforder_bd_site_set">设置为默认地址</a>
+            <a href="#">修改</a>
+            <a href="#" class="jforder_bd_del">删除</a>
+          </span>
+            </li>
+            <li>
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput" ></span>但小小 北京 北京市 昌平区 天通苑明天第一城4号楼101 手机15032203561             
+          </label>
+              <span class="jforder_bd_site">
+              <a class="jforder_bd_site_set">设置为默认地址</a>
+              <a href="#">修改</a>
+              <a href="#" class="jforder_bd_del">删除</a>
+            </span>
+            </li>
+             <li >
+              <label class=" jforder_bd_label">
+            <input type="radio" class=" jforder_bd_radio"  name="radio">
+            <span class="jforder_bd_radioInput"></span>
+            <span class="jforder_bd_radioads">但小兵 北京 北京市 昌平区 天通苑明天第一城4号楼101 固定电话010-21541589</span>     
+          </label>
+              <span class="jforder_bd_site">
+                <a class="jforder_bd_site_set">设置为默认地址</a>
+            <a href="#">修改</a>
+            <a href="#" class="jforder_bd_del">删除</a>
+          </span>
+            </li>
+          </ul>
+          <p class="jforder_bd_add_flex">
+            <span class="jforder_bd_add_flex_open">展开其他地址 <a href="#"><img src="images/s_down.png"/></a></span>
+            <span class="jforder_bd_add_flex_close">收起地址<a href="#"><img src="images/s_up.png"/></a></span>
+          </p>
+         
+        </div>
+        <h4>商品信息</h4>
+        <div class="jforder_bd_commodity">
+          <p class="jforder_bd_commodity_shop">
+            <span class="jforder_bd_shop">商品名称</span>
+            <span class="jforder_bd_spe">规格</span>
+            <span class="jforder_bd_count">数量</span>
+            <span class="jforder_bd_money">金额</span>
+        
+          </p>
+          <ul>
+          <li class="jforder_bd_goods">
+            <p class="jforder_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="jforder_bd_goods_spe">8个装</p>
+            <p class="jforder_bd_goods_num">
+              <input type="button" class="jforder_bd_goods_del" value="-" />
+              <input type="number" class="jforder_bd_goods_number" value="1" />
+              <input type="button" class="jforder_bd_goods_add" value="+" />
+            </p>
+            <p class="jforder_bd_goods_cal">60积分</p>
+          </li>
+          <li class="jforder_bd_goods">
+            <p class="jforder_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="jforder_bd_goods_spe">8个装</p>
+            <p class="jforder_bd_goods_num">
+              <input type="button" class="jforder_bd_goods_del" value="-" />
+              <input type="number" class="jforder_bd_goods_number" value="1" />
+              <input type="button" class="jforder_bd_goods_add" value="+" />
+            </p>
+            <p class="jforder_bd_goods_cal">60积分</p>
+          </li>
+          <li class="jforder_bd_goods">
+            <p class="jforder_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>福建琯溪白心蜜柚（大果） 2个装</span>
+            </p>
+            
+            <p class="jforder_bd_goods_spe">8个装</p>
+            <p class="jforder_bd_goods_num">
+              <input type="button" class="jforder_bd_goods_del" value="-" />
+              <input type="number" class="jforder_bd_goods_number" value="1" />
+              <input type="button" class="jforder_bd_goods_add" value="+" />
+            </p>
+            <p class="jforder_bd_goods_cal">60积分</p>
+          </li>
+          </ul>
+
+        </div>
+        <div class="jforder_bd_remark">
+        	添加订单备注</br>
+        	<input type="text" class="jforder_bd_limit" name="" id="" value="" placeholder="限45个字，请填写有关商品、支付、发票等信息"/>
+        	<p class="jforder_bd_remark_error">限输入45个字</p>
+        </div>
+        <div class="jforder_bd_sum"> 
+          <span class="jforder_bd_txt" style="float: right;">应付积分：<span class="jforder_bd_toljf" style="color: #FF5757;font-size: 22px;">180积分</span></span></br>
+        
+        </div>
+        <span class="jforder_bd_sum_btn"><a href="jfsuccess.html">确认兑换</a></span>
+
+      </div>
+
+      <!--底部内容-->
+      <div class="index_bottom_banner clearfix">
+        <ul class="bottom_banner">
+          <li class="guarantee fl"><i></i><span>优鲜保障</span><span class="index_line"></span></li>
+          <li class="monitoring fl"><i></i><span>全程监控</span><span class="index_line"></span></li>
+          <li class="preference fl"><i></i><span>礼拜五特惠</span><span class="index_line"></span></li>
+          <li class="direct_supply fl"><i></i><span>基地直供</span><span class="index_line"></span></li>
+          <li class="delivery fl"><i></i><span>准时送达</span></li>
+        </ul>
+      </div>
+      <div class="index_bottom_content clearfix">
+        <div class="index_bottom_content_left fl">
+          <div class="logo_img"><img src="images/logo.png" /></div>
+          <p><span>服务时间：08:00-22:00</span><span><i></i><a href="tel:400-800-8820"><strong>400-800-8820</strong></a></span></p>
+        </div>
+        <div class="index_bottom_content_center fl">
+          <div class="weinxin_img fl">
+            <img src="images/weixin.png" />
+            <p>礼拜五官方微信</p>
+          </div>
+          <div class="app_img fl">
+            <img src="images/app.png " />
+            <p>礼拜五APP</p>
+          </div>
+        </div>
+        <div class="index_bottom_content_right fl">
+          <ul class="fl">
+            <li>
+              <h3>关于礼拜五</h3></li>
+            <li>
+              <a href="##">新用户注册</a>
+            </li>
+            <li>
+              <a href="##">在线下单</a>
+            </li>
+            <li>
+              <a href="##">支付方式</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>配送说明</h3></li>
+            <li>
+              <a href="##">运费说明</a>
+            </li>
+            <li>
+              <a href="##">配送方式</a>
+            </li>
+            <li>
+              <a href="##">发票说明</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>售后服务</h3></li>
+            <li>
+              <a href="##">退换货说明</a>
+            </li>
+            <li>
+              <a href="##">服务保障承诺</a>
+            </li>
+            <li>
+              <a href="##">验货与签收</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>加盟礼拜五</h3></li>
+            <li>
+              <a href="##">加盟条款</a>
+            </li>
+            <li>
+              <a href="##">公司简介</a>
+            </li>
+            <li>
+              <a href="##">服务协议</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--页面结尾-->
+      <div class="index_bottom_footer">
+        <p><span>版权所有 © 礼拜五</span>保留所有权利 | 沪ICP备12042163</p>
+        <p><span>礼拜五</span>纵享品质</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>确认订单信息_没有地址</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/jquery.raty.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/mall_Friday.css" />
+    <link rel="stylesheet" href="css/layer.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="index_title">
+        <div class="index_title_box clearfix">
+          <div class="index_title_box_city fl">
+            <!--切换城市-->
+            <div class="control-label">所在城市：<span class="select_now">北京朝阳区</span><i></i></div>
+            <div class="control-group" style="display:none;">
+              <div class="advice">建议您的收货地址：<span>哈密市伊州区</span></div>
+              <div class="controls">
+                <select name="location_p" id="location_p"></select> <span>省</span>
+                <select name="location_c" id="location_c"></select> <span>市</span>
+                <select name="location_a" id="location_a"></select> <span>区</span>
+                <script src="js/region_select.js"></script>
+                <script type="text/javascript">
+                  new PCAS('location_p', 'location_c', 'location_a', '广东省', '', '');
+                </script>
+              </div>
+            </div>
+          </div>
+          <!--顶部详情-->
+          <div class="index_title_box_right  fr">
+            <ul>
+              <li class="fl">您好，<span>17701269859</span>
+                <a href="wxt_account-password_logging.html ">退出 </a>
+              </li>
+              <li class="fl">
+                <a href="my_order.html ">我的订单</a>
+              </li>
+              <li class="fl">
+                <a href="my_message.html">我的消息</a>
+              </li>
+              <li class="fl">
+                <a href="merchant.html">我是商家</a>
+              </li>
+              <li class="fl"><i></i>
+                <a href="tel:400-800-8820">400-800-8820</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      	
+      <div class="affirm_bdb">
+      <div class="affirm_hd">
+        <span class="affirm_hd_logo"><a href="index.html"><img src="images/logo.png"/></a></span>
+        <ul>
+          <li > 我的购物车</li>
+          <li class="affirm_hd_arrows">></li>
+          <li>确认订单信息
+          </li>
+          <li class="affirm_hd_arrows">></li>
+          <li>订单提交成功
+          </li>
+        </ul>
+      </div>
+  </div>
+  </div>
+      <div class="affirm_bd">
+      <h5>收货人信息</h5>  
+      <div class="noneads_address_body">
+      <p class="noneads_address_line1">
+        <span class="noneads_red-star1">*</span>
+        <span class="noneads_address_text1">收件人姓名：</span>
+        <input type="text" value="" placeholder="可以收货人姓名" />
+      </p>
+      <p class="noneads_address_line2">
+        <span class="noneads_red-star2">*</span>
+        <span class="noneads_address_text2">所在地区：</span>
+        <span class="control">
+                  <select name="location_p1" id="location_p1"></select> 
+                  <select name="location_c1" id="location_c1"></select> 
+                  <select name="location_a1" id="location_a1"></select> 
+                  <script src="js/region_select.js"></script>
+                  <script type="text/javascript">
+                    new PCAS('location_p1', 'location_c1', 'location_a1', '广东省', '', '');
+                  </script>
+                </span>
+      </p>
+      <p class="noneads_address_line3">
+        <span class="noneads_red-star2">*</span>
+        <span class="noneads_address_text2">详细地址：</span>
+        <input type="text" value="" placeholder="用于接收货物的详细地址 "/>
+      </p>
+      <p class="noneads_address_line4">
+        <span class="noneads_red-star2">*</span>
+        <span class="noneads_address_text2">联系电话：</span>
+        <span class="noneads_tel1"><input type="text" class="noneads_tel1_yz" value="" placeholder="推荐使用手机号"/><span class="noneads_address_errorr1"></span></span>
+        <span>或固定电话：</span>
+        <span class="noneads_tel2"><input type="text" class="noneads_tel2_yz" value="" placeholder="区号"/><span class="noneads_address_errorr2"></span></span>
+        <span>-</span>
+        <span class="noneads_tel3"><input type="text" class="noneads_tel3_yz" value="" placeholder="电话号码"/><span class="noneads_address_errorr3"></span></span>
+      </p>
+      
+      <p class="noneads_address_line6">
+        <input type="submit" name="" id="" value="确认并设为默认地址" />
+      </p>
+    </div>   
+      <h4>商品信息</h4>
+        <div class="affirm_bd_commodity">
+          <p class="affirm_bd_commodity_shop">
+            <span class="affirm_bd_shop">爱果果水果店</span>
+            <span class="affirm_bd_spe">规格</span>
+            <span class="affirm_bd_price">单价</span>
+            <span class="affirm_bd_count">数量</span>
+            <span class="affirm_bd_money">金额</span>
+        
+          </p>
+          <ul>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          </ul>
+          <span style="float: right;font-size: 18px;color: #666666;margin-top: 30px;margin-right: 39px;">运费
+            <span class="affirm_bd_yunfei" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥5.0</span>商品金额
+          <span class="affirm_bd_sp" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥1707.0</span>商家合计
+          <span class="affirm_bd_hj" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥1712.0</span>
+          </span>
+        </div>
+        
+        <div class="affirm_bd_receipt">
+          <span style="font-size: 18px;" >开票信息</span></br>
+          <p class="affirm_bd_receipt_radio">
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>不需要      
+          </label>
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>个人     
+          </label>
+          
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>单位   
+          </label>
+          </p>
+          <p class="affirm_bd_receipt_bottom">发票抬头：
+            <input type="text" name="" id="" value="" />
+            <span style="color: #ea5b0c;margin-right: 7px;">*</span>请填写后认真核对发票信息
+          </p>
+        </div>
+        <div class="affirm_bd_remark">
+          添加订单备注</br>
+          <input type="text" class="noneads_bd_limit" name="" id="" value="" placeholder="限45个字，请填写有关商品、支付、发票等信息"/>
+          <p class="jforder_bd_remark_error">限输入45个字</p>
+        </div>
+        
+        <div class="affirm_bd_commodity">
+          <p class="affirm_bd_commodity_shop">
+            <span class="affirm_bd_shop">爱果果水果店</span>
+            <span class="affirm_bd_spe">规格</span>
+            <span class="affirm_bd_price">单价</span>
+            <span class="affirm_bd_count">数量</span>
+            <span class="affirm_bd_money">金额</span>
+        
+          </p>
+          <ul>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          <li class="affirm_bd_goods">
+            <p class="affirm_bd_goods_pic">
+              <img src="images/s_caomei.png" /><span>云南蒙自石榴 8个装</span>
+            </p>
+            
+            <p class="affirm_bd_goods_spe">8个装</p>
+            <p class="affirm_bd_goods_price">￥569</p>
+            <p class="affirm_bd_goods_num">
+              <input type="button" class="affirm_bd_goods_del" value="-" />
+              <input type="number" class="affirm_bd_goods_number" value="1" />
+              <input type="button" class="affirm_bd_goods_add" value="+" />
+            </p>
+            </p>
+            <p class="affirm_bd_goods_cal">￥569</p>
+          </li>
+          </ul>
+          <span style="float: right;font-size: 18px;color: #666666;margin-top: 30px;margin-right: 39px;">运费
+            <span class="affirm_bd_yunfei" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥5.0</span>商品金额
+          <span class="affirm_bd_sp" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥1707.0</span>商家合计
+          <span class="affirm_bd_hj" style="color: #FF5757;font-size: 24px;margin: 0 40px 0 23px;">￥1712.0</span>
+          </span>
+         
+        </div>
+        
+        <div class="affirm_bd_receipt">
+          <span style="font-size: 18px;" >开票信息</span></br>
+          <p class="affirm_bd_receipt_radio">
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>不需要      
+          </label>
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>个人     
+          </label>
+          
+          <label class=" affirm_bd_label">
+            <input type="radio" class=" affirm_bd_radio"  name="receipt_radio">
+            <span class="affirm_bd_radioInput"></span>单位   
+          </label>
+          </p>
+          <p class="affirm_bd_receipt_bottom">发票抬头：
+            <input type="text" name="" id="" value="" />
+            <span style="color: #ea5b0c;margin-right: 7px;">*</span>请填写后认真核对发票信息
+          </p>
+        </div>
+        <div class="affirm_bd_remark">
+          添加订单备注</br>
+          <input type="text" class="noneads_bd_limit" name="" id="" value="" placeholder="限45个字，请填写有关商品、支付、发票等信息"/>
+          <p class="jforder_bd_remark_error">限输入45个字</p>
+        </div>
+        <div class="modification_time_box">
+          <p>次日达·礼拜五专享</p>
+          <ul class="modification_time_box_ul1 clearfix">
+            <li>选择送达时间：</li>
+            <li>2016年9月18日<span class="modification_time_change">12:00~3:00</span></li>
+            <li class="modification_time_box_hover"> <li class="modification_time_box_hover">
+              <span><i></i>
+                <a href="javascript:;" class="modification_time_box_amend_bth">点击修改</a>
+              </span>
+            </li>
+            </li>
+          </ul>
+          <div class="modification_time_box_ul2_hover">
+            <span class="modification_time_box_ul2_hover_sanjiao"><img src="images/modification_time_icon_sanjiao.png"/></span>
+            <ul class="modification_time_box_ul2 clearfix">
+              <li>10:00-13:00</li>
+              <li>11:00-14:00</li>
+              <li>12:00-15:00</li>
+              <li>13:00-16:00</li>
+              <li>14:00-17:00</li>
+              <li>15:00-18:00</li>
+              <li>16:00-19:00</li>
+              <li>17:00-20:00</li>
+              <li>18:00-21:00</li>
+              <li>19:00-22:00</li>
+            </ul>
+            <input type="button" name="" id="modification_time_box_cancel" value="取消" />
+            <input type="button" name="" id="modification_time_box_confirm" value="确定" />
+          </div>
+
+        </div>
+        
+        <div class="affirm_bd_sum"> 
+          <span class="jforder_bd_txt" style="float: right;">实付金额：<span class="jforder_bd_toljf" style="color: #FF5757;font-size: 24px;">￥3424</span></span></br>
+        
+        </div>
+        <p class="jforder_bd_sum_txt"><span>订单完成后可获得积分<span class="affirm_bd_jf" style="color: #f08200;font-size: 18px;">300积分</span></span></p>
+        <span class="jforder_bd_sum_btn"><a href="submitOrder.html">提交订单</a></span>
+
+      </div>
+
+      <!--底部内容-->
+      <div class="index_bottom_banner clearfix">
+        <ul class="bottom_banner">
+          <li class="guarantee fl"><i></i><span>优鲜保障</span><span class="index_line"></span></li>
+          <li class="monitoring fl"><i></i><span>全程监控</span><span class="index_line"></span></li>
+          <li class="preference fl"><i></i><span>礼拜五特惠</span><span class="index_line"></span></li>
+          <li class="direct_supply fl"><i></i><span>基地直供</span><span class="index_line"></span></li>
+          <li class="delivery fl"><i></i><span>准时送达</span></li>
+        </ul>
+      </div>
+      <div class="index_bottom_content clearfix">
+        <div class="index_bottom_content_left fl">
+          <div class="logo_img"><img src="images/logo.png" /></div>
+          <p><span>服务时间：08:00-22:00</span><span><i></i><a href="tel:400-800-8820"><strong>400-800-8820</strong></a></span></p>
+        </div>
+        <div class="index_bottom_content_center fl">
+          <div class="weinxin_img fl">
+            <img src="images/weixin.png" />
+            <p>礼拜五官方微信</p>
+          </div>
+          <div class="app_img fl">
+            <img src="images/app.png " />
+            <p>礼拜五APP</p>
+          </div>
+        </div>
+        <div class="index_bottom_content_right fl">
+          <ul class="fl">
+            <li>
+              <h3>关于礼拜五</h3></li>
+            <li>
+              <a href="##">新用户注册</a>
+            </li>
+            <li>
+              <a href="##">在线下单</a>
+            </li>
+            <li>
+              <a href="##">支付方式</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>配送说明</h3></li>
+            <li>
+              <a href="##">运费说明</a>
+            </li>
+            <li>
+              <a href="##">配送方式</a>
+            </li>
+            <li>
+              <a href="##">发票说明</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>售后服务</h3></li>
+            <li>
+              <a href="##">退换货说明</a>
+            </li>
+            <li>
+              <a href="##">服务保障承诺</a>
+            </li>
+            <li>
+              <a href="##">验货与签收</a>
+            </li>
+          </ul>
+          <ul class="fl">
+            <li>
+              <h3>加盟礼拜五</h3></li>
+            <li>
+              <a href="##">加盟条款</a>
+            </li>
+            <li>
+              <a href="##">公司简介</a>
+            </li>
+            <li>
+              <a href="##">服务协议</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--页面结尾-->
+      <div class="index_bottom_footer">
+        <p><span>版权所有 © 礼拜五</span>保留所有权利 | 沪ICP备12042163</p>
+        <p><span>礼拜五</span>纵享品质</p>
+      </div>
+    </div>
+  </body>
+
+</html>

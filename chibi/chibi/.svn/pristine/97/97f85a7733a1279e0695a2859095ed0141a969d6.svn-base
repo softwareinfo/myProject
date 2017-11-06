@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>线路详情</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+	<div class="warp">
+		<div id="viewInfoTab" class="viewInfoTab routeDetailTab">
+			<div class="hd">
+				<ul>
+					<li><a href="javascript:void(0)">一日游</a></li>
+					<li><a href="javascript:void(0)">两日游</a></li>
+					<li><a href="javascript:void(0)">三日游</a></li>
+				</ul>
+			</div>
+			<div class="bd" id="viewInfoTabBd"><!-- 添加id，js用到 -->
+				<div class="cont"><!-- 高度自适应需添加外层 -->
+					<div class="viewList">
+						<div class="viewTitle">
+							<h2>悠享温泉</h2>
+						</div>
+						<div class="viewIntro">
+							<div class="inner">
+								<img src="images/img1.jpg" alt="">
+								<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont">
+					<div class="viewList">
+						<div class="viewTitle">
+							<h2>悠享温泉</h2>
+						</div>
+						<div class="viewIntro">
+							<div class="inner">
+								<img src="images/img1.jpg" alt="">
+								<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont">
+					<div class="viewList">
+						<div class="viewTitle">
+							<h2>悠享温泉</h2>
+						</div>
+						<div class="viewIntro">
+							<div class="inner">
+							<img src="images/img1.jpg" alt="">
+								<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			TouchSlide( { slideCell:"#viewInfoTab",
+				endFun:function(i){ //高度自适应
+					var bd = document.getElementById("viewInfoTabBd");
+					bd.parentNode.style.height = bd.children[i].children[0].offsetHeight+"px";
+					if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+				}
+
+			} );
+		</script>
+
+		<!-- footer -->
+		<footer>
+			<p>技术支持：中景通（武汉）信息科技有限公司</p>
+		</footer>
+	</div>
+</body>
+</html>

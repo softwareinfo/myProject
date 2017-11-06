@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>美食列表</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="warp">
+		<ul class="foodList">
+			<li class="li clearfix"><a href="###">
+				<img src="images/img3.jpg"/>
+				<div class="footInfo">
+					<p class="foodName">桂花米酒</p>
+					<div class="foodRcmd clearfix">
+						<p class="rcmdTit">推荐指数：</p>
+		                <ul class="cmtStar clearfix">
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                </ul>
+					</div>
+				</div>
+			</a></li>
+			<li class="li active"><a href="viewDetail.html" class=" clearfix">
+				<img src="images/img3.jpg"/>
+				<div class="footInfo">
+					<p class="foodName">桂花米酒</p>
+					<div class="foodRcmd clearfix">
+						<p class="rcmdTit">推荐指数：</p>
+		                <ul class="cmtStar clearfix">
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                </ul>
+					</div>
+				</div>
+			</a></li>
+			<li class="li clearfix"><a href="###">
+				<img src="images/img3.jpg"/>
+				<div class="footInfo">
+					<p class="foodName">桂花米酒</p>
+					<div class="foodRcmd clearfix">
+						<p class="rcmdTit">推荐指数：</p>
+		                <ul class="cmtStar clearfix">
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                </ul>
+					</div>
+				</div>
+			</a></li>
+			<li class="li clearfix"><a href="###">
+				<img src="images/img3.jpg"/>
+				<div class="footInfo">
+					<p class="foodName">桂花米酒</p>
+					<div class="foodRcmd clearfix">
+						<p class="rcmdTit">推荐指数：</p>
+		                <ul class="cmtStar clearfix">
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                </ul>
+					</div>
+				</div>
+			</a></li>
+			<li class="li clearfix"><a href="###">
+				<img src="images/img3.jpg"/>
+				<div class="footInfo">
+					<p class="foodName">桂花米酒</p>
+					<div class="foodRcmd clearfix">
+						<p class="rcmdTit">推荐指数：</p>
+		                <ul class="cmtStar clearfix">
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                    <li class="star"></li>
+		                </ul>
+					</div>
+				</div>
+			</a></li>
+		</ul>
+
+		<!-- footer -->
+		<footer>
+			<p>技术支持：中景通（武汉）信息科技有限公司</p>
+		</footer>
+	</div>
+</body>
+</html>

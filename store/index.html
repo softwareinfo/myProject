@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>首页</title>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/region_select.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layer.css" />
+    <link rel="stylesheet" href="css/mall_Friday.css" />
+    <style type="text/css">
+      body .jiasan-class {
+        width: 688px !important;
+        height: 452px;
+        border: 5px solid rgb(226, 226, 226);
+      }
+      .layui-layer-rim {
+        border: 5px solid rgb(226, 226, 226);
+      }
+      body .jiasan-class .layui-layer-content {
+        height: 372px !important;
+        width: 688px;
+        text-align: left;
+        padding: 0;
+      }
+      
+      .jiasan-class .layui-layer-btn {
+        text-align: left;
+        padding: 0;
+        padding-left: 40px;
+      }
+      
+      body .jiasan-class .layui-layer-btn .layui-layer-btn0 {
+        width: 190px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        /*background: rgb(240,130,0);*/
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        border: 0;
+      }
+      
+      body .jia-class {
+        border: 5px solid rgb(226, 226, 226);
+        border-radius: 0;
+      }
+      
+      body .jia-class .layui-layer-content {
+        height: 174px !important;
+        width: 646px;
+        padding: 0;
+        line-height: 0;
+      }
+      
+      .add_car_success {
+        width: 646px;
+        height: 174px;
+        text-align: center;
+        line-height: 174px;
+        font-size: 24px;
+        font-family: "微软雅黑";
+        color: rgb(102, 102, 102);
+      }
+      
+      .add_car_success i {
+        width: 40px;
+        height: 44px;
+        display: inline-block;
+        position: relative;
+        top: 15px;
+        right: 23px;
+        background: url(images/toumig.png) -9px -105px;
+      }
+      
+      .layui-layer-btn {
+        padding: 0;
+        height: 130px;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      
+      .layui-layer-btn a {
+        margin: 0;
+        padding: 0;
+        width: 170px;
+        height: 45px;
+        border-radius: 5px;
+        line-height: 45px;
+        font-size: 18px;
+        color: #fff;
+        border: 0;
+      }
+      
+      .layui-layer-btn .layui-layer-btn0 {
+        margin-right: 40px;
+        background: rgb(240, 130, 0);
+      }
+      
+      .layui-layer-btn .layui-layer-btn1 {
+        background: rgb(73, 142, 61);
+      }
+    </style>
+  </head>
+  <div class="nba_home" style="display: none;">
+    <div class="cc_home"><span class="mac_home">请选择产品规格</span></div>
+    <div class="zuozuo_home"><span class="small_one_goodsdetail">现价：￥20.0</span><span class="small_two_goodsdetail">原价：￥40.0</span>
+      <p class="guige_goodsdetail">
+        请选择规格
+        <span class="small_three_goodsdetail">500g</span>
+        <span class="small_three_goodsdetail">1000g</span>
+        <span class="small_three_goodsdetail">2000g</span>
+      </p>
+      <p class="guige_goodsdetail_you">请选择规格<span class="small_three_goodsdetail_you">500g</span>
+        <span class="small_three_goodsdetail_you">1000g</span></p>
+      <p class="shuliang_goodsdetail">数量:<span class="gaigai_goodsdetail"><input type="button" class="affirm_bd_goods_jian" value="-" /><input type="text" class="affirm_bd_goods_numbers" value="1" /><input type="button" class="affirm_bd_goods_jia" value="+" /></span>件
+    </div>
+  </div>
+
+  <body>
+    <div class="index_title">
+      <div class="index_title_box clearfix">
+        <div class="index_title_box_city fl">
+          <!--切换城市-->
+          <div class="control-label">所在城市：<span class="select_now">北京朝阳区</span><i></i></div>
+          <div class="control-group" style="display:none;">
+            <div class="advice">建议您的收货地址：<span>哈密市伊州区</span></div>
+            <div class="controls">
+              <select name="location_p" id="location_p"></select> <span>省</span>
+              <select name="location_c" id="location_c"></select> <span>市</span>
+              <select name="location_a" id="location_a"></select> <span>区</span>
+              <script src="js/region_select.js"></script>
+              <script type="text/javascript">
+                new PCAS('location_p', 'location_c', 'location_a', '广东省', '', '');
+              </script>
+            </div>
+          </div>
+        </div>
+        <!--顶部详情-->
+        <ul style="display: none;" class="abc_home">
+          <li class="logging_box_line1">
+            <span class="banner_box_logging">登录</span>
+            <span class="banner_box_password_logging">账号密码登录</span>
+            <span class="banner_box_logging_icon"></span>
+          </li>
+          <li class="banner_box_tel" id="iphone_num"><input type="text" placeholder="请输入手机号码" /><span class="correct-icon" id="iphone_num_correct"></span></li>
+          <li class="banner_box_tel_error" id="iphone_num_error"><span class="error-icon"></span><span class="again">手机号码不正确，请重新输入</span></li>
+          <li class="logging_box_line2">
+            <div class="banner_box_yanzheng"><input type="text" placeholder="验证码" /></div>
+            <div class="banner_box_yanzheng_pic"><img src="images/wxt_logging_yanzhengma.png" /></div>
+            <div class="banner_box_yanzheng_text">看不清换一张</div>
+          </li>
+          <li class="banner_box_tel_error"><span class="error-icon"></span><span class="again">验证码不正确，请重新输入</span></li>
+          <li class="banner_box_shoujiyanzheng"><input type="text" placeholder="手机验证码" />
+            <a class="gain_yanzhengma">获取验证码</a>
+          </li>
+          <li class="banner_box_shoujiyanzheng_error"></li>
+          <li class="logging_box_line3">
+            <div class="self-motion_logging"><input type="checkbox"><span class="self-motion_logging_text">自动登录</span></div>
+            <div class="forget">
+              <a href="wxt_reset_password.html">忘记密码？</a>
+            </div>
+          </li>
+          <li class="logging_box_line4">
+            <div class="logging_botton">
+              <a href="">登录</a>
+            </div>
+            <div class="vip_botton">
+              <a href="">会员注册</a>
+            </div>
+          </li>
+          <li class="logging_box_line5">提示：未注册用户将直接注册成为礼拜五用户</li>
+          <li class="logging_box_line6">
+            <a href="">用合作网站登录</a>
+          </li>
+          <li class="logging_box_line7">
+            <div class="weixin_logo">
+              <a href=""><img src="images/wxt_logging_weixinlogo.png" /></a>
+            </div>
+            <div class="qq_logo">
+              <a href=""><img src="images/wxt_logging_qqlogo.png" /></a>
+            </div>
+          </li>
+        </ul>
+        <div class="index_title_box_right  fr">
+          <ul>
+            <li class="fl">您好
+              <a href="##" class="dd_home">登录 </a>
+            </li>
+            <li class="fl">
+              <a href="my_order.html">我的订单</a>
+            </li>
+            <li class="fl">
+              <a href="my_message.html">我的消息</a>
+            </li>
+            <li class="fl">
+              <a href="merchant.html">我是商家</a>
+            </li>
+            <li class="fl"><i></i>
+              <a href="tel:400-800-8820">400-800-8820</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="index_head clearfix">
+      <div class="index_head_logo fl">
+        <a href="index.html"><img src="images/logo.png" /></a>
+      </div>
+      <div class="index_head_search fl"><input type="text" placeholder="请输入关键字搜索" /><button onclick="location.href='seekout.html'"></button>
+        <p><span>热门：</span><span>奇异果</span><span>牛排</span><span>山竹</span><span>牛油果</span></p>
+      </div>
+      <div class="index_head_single fr"><span class="personal_center fl"><i></i><a href="my_account.html">个人中心</a></span><span class="car_buy fl"><i></i><a href="shoppingCart.html">购物车</a></span><span class="rec-bubble">5</span></div>
+    </div>
+    <div class="index_head_menu clearfix">
+      <ul class="index_head_menu_box">
+        <li class="index_menu_hover fl">
+          <a href="##">全部分类<i></i></a>
+          <ul class="index_menu_list clearfix">
+            <li class="fruits"><i></i>
+              <a href="##">新鲜水果</a>
+              <ul class="index_small_menu clearfix">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="seafood"><i></i>
+              <a href="##">生猛海鲜</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="poultry"><i></i>
+              <a href="##">肉类家禽</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="vegetarian"><i></i>
+              <a href="##">蛋奶素食</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="vegetables"><i></i>
+              <a href="##">田园蔬菜</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="drinks"><i></i>
+              <a href="##">零食酒水</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="groceries"><i></i>
+              <a href="##">粮油杂货</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="coupon"><i></i>
+              <a href="##">礼品卡劵</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="furniture"><i></i>
+              <a href="##">家具用品</a>
+              <ul class="index_small_menu">
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+                <li>
+                  <h4 class="fl">应季鲜果</h4>
+                  <div class="index_small_box fl">
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                    <p><span>草莓</span><span>葡萄</span><span>香蕉</span><span>苹果</span></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="fl main_menu index_menu_home_page" style="background: #F08200;">
+          <a href="index.html" style="color: #fff;">首页</a>
+        </li>
+        <li class="fl main_menu">
+          <a href="wxt_city-wide.html">同城</a>
+        </li>
+        <li class="fl main_menu">
+          <a href="about_friday_pff.html">礼拜五</a>
+        </li>
+        <li class="fl main_menu">
+          <a href="jifenMall.html">积分商城</a>
+        </li>
+        <li class="fl main_menu">
+          <a href="##">导航+</a>
+        </li>
+      </ul>
+    </div>
+    <p class="parting_line"></p>
+    <div class="banner_home">
+      <div class="pic_home">
+        <a href="##"><img src="images/banner1.png" alt="" /></a>
+        <a href="##"><img src="images/banner1.png" alt="" /></a>
+        <a href="##"><img src="images/banner1.png" alt="" /></a>
+        <a href="##"><img src="images/banner1.png" alt="" /></a>
+      </div>
+      <div class="get_home">
+        <button class="btn-prev_home">&lt;</button>
+        <button class="btn-next_home">&gt;</button>
+      </div>
+      <div class="dot_home">
+      </div>
+    </div>
+    <div class="hot_sale_home">
+      <ul>
+        <li>
+          <a href="">
+            <img src="images/home_03.png" alt="" />
+            <p>内蒙古草原</p>
+            <p>蒸羊羊精肉</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <img src="images/home_05.png" alt="" />
+            <p>新西兰柠檬</p>
+            <span>鲜橙靓皮 柠香清新</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <img src="images/home_03.png" alt="" />
+            <p>内蒙古草原</p>
+            <p>蒸羊羊精肉</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <img src="images/home_05.png" alt="" />
+            <p>新鲜草莓</p>
+            <span>留住新鲜</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main_home">
+      <div class="main_top_home">
+        <img src="images/fridayclock.png" alt="" />
+        <p>礼拜五</p>
+        <span class="friday_home">Friday</span>
+        <span class="more_home"><a href="libaiwuxiangqing.html">更多></a></span>
+        <div class="timer-simple-seconds" timer="14400">
+          <p>距离开始:</p>
+          <span class="daytime_home">2天</span>
+          <span class="hour">01</span><span class="time_home">:</span>
+          <span class="minute">00</span><span class="time_home">:</span>
+          <span class="second">00</span>
+        </div>
+      </div>
+      <div class="banner_small_home">
+        <ul class="small_con_home">
+          <li>
+            <a href=""><img src="images/fridayone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridaytwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridaythree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridayfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridayone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridaytwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridaythree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+          <li>
+            <a href=""><img src="images/fridayfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="most_comunt_x_home">6个装</p>
+            <span class="dont_home">礼拜五价:</span>
+            <span class="dollar_home">￥28.80</span>
+          </li>
+        </ul>
+        <div class="con_num_home"></div>
+      </div>
+    </div>
+    <div class="main_home">
+      <div class="main_top_home">
+        <a href=""><img src="images/newfruits.png" alt="" /></a>
+        <p>新鲜水果</p>
+        <span class="friday_home">采自新疆优质水果生产基地，品质一流</span>
+        <span class="more_home"><a href="libaiwuxiangqing.html">更多></a></span>
+      </div>
+      <div class="banner_small_home">
+        <ul class="small_con_ano_home">
+          <li>
+            <a href=""><img src="images/fruitone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/fruittwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/fruitthree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/fruitfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_home">
+      <div class="main_top_home">
+        <a href=""><img src="images/waterlogo.png" alt="" /></a>
+        <p>水产海鲜</p>
+        <span class="friday_home">国内外新鲜到港的鱼虾蟹贝，我们全都有</span>
+        <span class="more_home"><a href="libaiwuxiangqing.html">更多></a></span>
+      </div>
+      <div class="banner_small_home">
+        <ul class="small_con_ano_home">
+          <li>
+            <a href=""><img src="images/waterone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/watertwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/waterthree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/waterfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_home">
+      <div class="main_top_home">
+        <a href=""><img src="images/meatlogo.png" alt="" /></a>
+        <p>肉类禽蛋</p>
+        <span class="friday_home">采自新疆优质水果生产基地，品质一流</span>
+        <span class="more_home"><a href="libaiwuxiangqing.html">更多></a></span>
+      </div>
+      <div class="banner_small_home">
+        <ul class="small_con_ano_home">
+          <li>
+            <a href=""><img src="images/meatone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/meattwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/meatthree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/meatfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_home">
+      <div class="main_top_home">
+        <a href=""><img src="images/milklogo.png" alt="" /></a>
+        <p>蛋奶速食</p>
+        <span class="friday_home">国内外新鲜到港的鱼虾蟹贝，我们全都有</span>
+        <span class="more_home"><a href="libaiwuxiangqing.html">更多></a></span>
+      </div>
+      <div class="banner_small_home">
+        <ul class="small_con_ano_home">
+          <li>
+            <a href=""><img src="images/waterone.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/watertwo.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/waterthree.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+          <li>
+            <a href=""><img src="images/waterfour.png" alt="" /></a>
+            <p class="most_comunt_home">新西兰佳沛黄金奇异果</p>
+            <p class="comunt_home">果肉绵密，花蜜般的甘甜百吃不厌</p>
+            <span class="dollar_home">￥28.80</span>
+            <span class="no_dollar_home">¥40.00</span>
+            <i class="cba_home"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="index_bottom_banner clearfix">
+      <ul class="bottom_banner">
+        <li class="guarantee fl"><i></i><span>优鲜保障</span><span class="index_line"></span></li>
+        <li class="monitoring fl"><i></i><span>全程监控</span><span class="index_line"></span></li>
+        <li class="preference fl"><i></i><span>礼拜五特惠</span><span class="index_line"></span></li>
+        <li class="direct_supply fl"><i></i><span>基地直供</span><span class="index_line"></span></li>
+        <li class="delivery fl"><i></i><span>准时送达</span></li>
+      </ul>
+    </div>
+    <div class="index_bottom_content clearfix">
+      <div class="index_bottom_content_left fl">
+        <div class="logo_img"><img src="images/logo.png" /></div>
+        <p><span>服务时间：08:00-22:00</span><span><i></i><a href="tel:400-800-8820"><strong>400-800-8820</strong></a></span></p>
+      </div>
+      <div class="index_bottom_content_center fl">
+        <div class="weinxin_img fl">
+          <img src="images/weixin.png" />
+          <p>礼拜五官方微信</p>
+        </div>
+        <div class="app_img fl">
+          <img src="images/app.png " />
+          <p>礼拜五APP</p>
+        </div>
+      </div>
+      <div class="index_bottom_content_right fl">
+        <ul class="fl">
+          <li>
+            <h3>关于礼拜五</h3></li>
+          <li>
+            <a href="##">新用户注册</a>
+          </li>
+          <li>
+            <a href="##">在线下单</a>
+          </li>
+          <li>
+            <a href="##">支付方式</a>
+          </li>
+        </ul>
+        <ul class="fl">
+          <li>
+            <h3>配送说明</h3></li>
+          <li>
+            <a href="##">运费说明</a>
+          </li>
+          <li>
+            <a href="##">配送方式</a>
+          </li>
+          <li>
+            <a href="##">发票说明</a>
+          </li>
+        </ul>
+        <ul class="fl">
+          <li>
+            <h3>售后服务</h3></li>
+          <li>
+            <a href="##">退换货说明</a>
+          </li>
+          <li>
+            <a href="##">服务保障承诺</a>
+          </li>
+          <li>
+            <a href="##">验货与签收</a>
+          </li>
+        </ul>
+        <ul class="fl">
+          <li>
+            <h3>加盟礼拜五</h3></li>
+          <li>
+            <a href="##">加盟条款</a>
+          </li>
+          <li>
+            <a href="##">公司简介</a>
+          </li>
+          <li>
+            <a href="##">服务协议</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--页面结尾-->
+    <div class="index_bottom_footer">
+      <p><span>版权所有 © 礼拜五</span>保留所有权利 | 沪ICP备12042163</p>
+      <p><span>礼拜五</span>纵享品质</p>
+    </div>
+    </div>
+  </body>
+
+</html>

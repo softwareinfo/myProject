@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+   	<style>html,body{width:100%;height:100%;}.warp,.con{height:100%;overflow: hidden;}</style>
+</head>
+<body>
+	<div class="warp">
+		<div class="con keyCon" id="con">
+
+			<!-- 指导页 -->
+			<div class="guid" id="guid" style="display:none">
+				<img class="guid1" src="images/guid1.png" class="长按录音键进行录音">
+				<img class="guid2" src="images/guid2.png" class="不知道去哪里，点击随便看看">
+			</div>
+
+			<div class="recordWarp"  style="display:block">
+				<!-- 用户对话框 -->
+				<div class="user clearfix">
+					<div class="userInner">
+						<audio src="audio/test.mp3" class="audio" id="audio" preload loop></audio>
+						<p id="audio_btn">Hi!</p>
+					</div>
+					<img src="images/user.jpg" class="用户图像">
+				</div>
+
+				<!-- 小乔对话框 -->
+				<div class="xiaoq">
+					<div class="txt">
+						<p>您的专属导游在此！有什么问题可以向我提问长按下方录音按钮开始语音导航。</p>
+						<!-- <p>赫赫有名的赤壁大战，是以少胜多，以弱胜强的终极典范，您还不快来古战场遗址借东风，您还不快来古战场遗址借...</p> -->
+						<a href="javascript:;" class="more" id="more">进去看看</a>
+					</div>
+				</div>
+			</div>
+			<img src="images/xiaoqiao.png" alt="xiaoqiao" class="xiaoqImg" style="display: block;">
+
+			<!-- 键盘输入 -->
+			<div class="keyWarp" style="display:none;">
+				<!-- 键盘输入背景 -->
+				<div class="keyBg">
+					<div class="keyBg1"></div>
+					<div class="keyBg2"></div>
+					<div class="keyBg3"></div>
+				</div>
+
+				<div class="key">
+					<form class="formBox">
+						<p class="inpWarp">
+							<input type="text" class="inp" placeholder="请输入你想搜索的内容" id="inp" />
+							<a href="javascript:;" class="close">关闭</a>
+						</p>
+					</form>
+					<a href="javascript:;" class="subBtn">确定</a>
+				</div>
+
+				<div class="error">您输入的内容为空，请重新输入！</div>
+			</div>
+
+			<!-- 随便看看 -->
+			<div class="lookWarp" style="display:none">
+				<div class="lookWarpBg"></div>
+				<div class="lookAround">
+					<ul class="list clearfix" id="list">
+						<li class="active wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="0.1s"><p>瞰</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="0.5s"><p>游</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="0.8s"><p>食</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="1.1s"><p>采</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="1.4s"><p>榻</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="1.7s"><p>学</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="2s"><p>询</p></li>
+						<li class="wow bounceInDown animated" data-wow-duration="1s" data-wow-delay="2.3s"><p>驶</p></li>
+					</ul>
+
+					<div class="listTxtBox" style="display:block">
+						<canvas width="300" height="300" id="myCanvas1"></canvas>
+						<div id="tags1" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas2"></canvas>
+						<div id="tags2" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas3"></canvas>
+						<div id="tags3" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas4"></canvas>
+						<div id="tags4" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas5"></canvas>
+						<div id="tags5" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas6"></canvas>
+						<div id="tags6" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas7"></canvas>
+						<div id="tags7" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+
+					<div class="listTxtBox">
+						<canvas width="300" height="300" id="myCanvas8"></canvas>
+						<div id="tags8" class="listTxt">
+							<a href="javascript:;" target="_blank">看美景1</a>
+							<a href="###" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁1</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁</a>
+							<a href="javascript:;" target="_blank">赤壁摩崖石刻</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+							<a href="javascript:;" target="_blank">太乙湖</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 底部导航开始 -->
+		<div class="nav">
+			<div class="navInner clearfix" id="nav_inner">
+				<div class="navList keyInp keyInpBtn">
+					<img src="images/icon8.png" alt="键盘输入">
+					<p>键盘输入</p>
+				</div>
+				<div class="navList voiceInp">
+					<a href="javascript:;">
+						<img src="images/audiobg.png" alt="语音输入" class="record" id="record">
+						<!-- <img src="images/xz.png" alt="语音输入" class="record rotate" id="record"> -->
+						<span class="record-txt">正在处理</span>
+					</a>
+				</div>
+				<div class="touchArea" id="touch_area">点击区域</div>
+				<div class="navList look">
+					<img src="images/icon7.png" alt="随便看看">
+					<p>随便看看</p>
+				</div>
+			</div>
+		</div>
+		<!-- 底部导航结束 -->
+
+		<!-- 弹窗 -->
+		<div class="maskBg"></div>
+		<div class="mask" id="mask">
+			<p>语音导览需要启动录音设备，您要开启录音吗？</p>
+			<div class="btnGroup">
+				<a href="javascript:;">否</a>
+				<a href="javascript:;">是</a>
+			</div>
+		</div>
+
+	</div>	
+ 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/tagcanvas.min.js"></script>
+	<script>		
+		window.onload = function(){
+			var audio = document.getElementById('audio');
+			var btn = document.getElementById('audio_btn');
+			var canvas = document.getElementsByTagName("canvas");
+			var timer = null;
+			var isClick = false;
+
+			btn.onclick = function(){
+				if(isClick){
+					audio.play();
+					isClick = false;
+				}else{
+					audio.pause();
+					isClick = true;
+				}				
+			}
+
+			//tag标签的落下
+			new WOW().init();
+
+			//定义画布大小
+			var winH = document.body.clientWidth;
+			for(var i = 0;i < canvas.length; i++){
+				canvas[i].width = winH;
+				canvas[i].height = winH;
+			}
+		};
+	</script>
+</body>
+</html>

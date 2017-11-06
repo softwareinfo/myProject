@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script src="js/layer.js"></script>
+     <script src="js/jquery.raty.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/layer.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" href="css/mall_Friday.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="index_title">
+        <div class="index_title_box clearfix">
+          <div class="index_title_box_city fl">
+            <!--切换城市-->
+            <div class="control-label">所在城市：<span class="select_now">北京朝阳区</span><i></i></div>
+            <div class="control-group" style="display:none;">
+              <div class="advice">建议您的收货地址：<span>哈密市伊州区</span></div>
+              <div class="controls">
+                <select name="location_p" id="location_p"></select> <span>省</span>
+                <select name="location_c" id="location_c"></select> <span>市</span>
+                <select name="location_a" id="location_a"></select> <span>区</span>
+                <script src="js/region_select.js"></script>
+                <script type="text/javascript">
+                  new PCAS('location_p', 'location_c', 'location_a', '广东省', '', '');
+                </script>
+              </div>
+            </div>
+          </div>
+          <!--顶部详情-->
+           <div class="index_title_box_right  fr">
+            <ul>
+              <li class="fl">您好，<span>17701269859</span>
+               <a href="wxt_account-password_logging.html ">退出 </a>
+               
+              </li>
+              <li class="fl">
+                <a href="my_order.html ">我的订单</a>
+              </li>
+              <li class="fl">
+                <a href="my_message.html">我的消息</a>
+              </li>
+              <li class="fl">
+                <a href="merchant.html">我是商家</a>
+              </li>
+              <li class="fl"><i></i>
+                <a href="tel:400-800-8820">400-800-8820</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="affirm_bdb">
+      <div class="shoppingCart_hd">
+        <span class="shoppingCart_hd_logo"><a href="index.html"><img src="images/logo.png"/></a></span>
+        <ul>
+          <li> 我的购物车</li>
+          <li class="shoppingCart_hd_arrows">></li>
+          <li>确认订单信息
+          </li>
+          <li class="shoppingCart_hd_arrows">></li>
+          <li>订单提交成功
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="shoppingCart_bd">
+        <p class="shoppingCart_bd_topic">
+          <span class="shoppingCart_bd_car"></span>购物车
+        </p>
+        <div class="shoppingCart_bd_commodity">
+          <p class="shoppingCart_bd_commodity_shop">
+            <span class="shoppingCart_bd_shop">
+              <input type="checkbox" class="shoppingCart_bd_shop_check" /><a href="#">爱果果水果店</a>
+            </span>
+            <span class="shoppingCart_bd_spe">规格</span>
+            <span class="shoppingCart_bd_price">单价</span>
+            <span class="shoppingCart_bd_count">数量</span>
+            <span class="shoppingCart_bd_money">金额</span>
+            <span class="shoppingCart_bd_handle">操作</span>
+          </p>
+          <ul>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li>
+            <p class="shoppingCart_bd_shop_sum">商品金额<span class="shoppingCart_bd_shop_p">￥0.0</span></p>
+          </li>
+          </ul>
+
+        </div>
+        <div class="shoppingCart_bd_commodity">
+          <p class="shoppingCart_bd_commodity_shop">
+            <span class="shoppingCart_bd_shop">
+              <input type="checkbox" class="shoppingCart_bd_shop_check" /><a href="#">爱果果水果店</a>
+            </span>
+            <span class="shoppingCart_bd_spe">规格</span>
+            <span class="shoppingCart_bd_price">单价</span>
+            <span class="shoppingCart_bd_count">数量</span>
+            <span class="shoppingCart_bd_money">金额</span>
+            <span class="shoppingCart_bd_handle">操作</span>
+          </p>
+          <ul>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li class="shoppingCart_bd_goods">
+            <p class="shoppingCart_bd_goods_pic">
+              <input type="checkbox" class="shoppingCart_bd_goods_check" />
+              <img src="images/s_caomei.png" />
+            </p>
+            <p class="shoppingCart_bd_goods_name">云南蒙自石榴 8个装</p>
+            <p class="shoppingCart_bd_goods_spe">8个装</p>
+            <p class="shoppingCart_bd_goods_price">￥569</p>
+            <p class="shoppingCart_bd_goods_num">
+              <input type="button" class="shoppingCart_bd_goods_del" value="-" />
+              <input type="number" class="shoppingCart_bd_goods_number" value="1" />
+              <input type="button" class="shoppingCart_bd_goods_add" value="+" />
+            </p>
+            <p class="shoppingCart_bd_goods_cal">￥569</p>
+            <p class="shoppingCart_bd_goods_op">删除</p>
+          </li>
+          <li >
+            <p class="shoppingCart_bd_shop_sum">商品金额<span class="shoppingCart_bd_shop_p">￥0.0</span></p>
+          </li>
+          </ul>
+
+        </div>
+        <div class="shoppingCart_bd_total">
+          <ul>
+          <li><span href="##" class="shoppingCart_bd_total_all">全选</span></li>
+          <li><span href="#" class="shoppingCart_bd_total_del">批量删除</span></li>
+          </ul>
+          <p class="shoppingCart_bd_total_money"><span>商品总计：</span>
+            <span class="shoppingCart_bd_total_sum">￥0.0</span>
+        <a href="affirmMes.html">立即购买</a>
+          </p>
+        </div>
+        
+      </div>
+      <!--底部内容--> 
+      <div class="index_bottom_banner clearfix">
+        <ul class="bottom_banner">
+          <li class="guarantee fl"><i></i><span>优鲜保障</span><span class="index_line"></span></li>
+          <li class="monitoring fl"><i></i><span>全程监控</span><span class="index_line"></span></li>
+          <li class="preference fl"><i></i><span>礼拜五特惠</span><span class="index_line"></span></li>
+          <li class="direct_supply fl"><i></i><span>基地直供</span><span class="index_line"></span></li>
+          <li class="delivery fl"><i></i><span>准时送达</span></li>
+        </ul>
+      </div>
+      <div class="index_bottom_content clearfix">
+      <div class="index_bottom_content_left fl">
+        <div class="logo_img"><img src="images/logo.png"/></div>
+        <p><span>服务时间：08:00-22:00</span><span><i></i><a href="tel:400-800-8820"><strong>400-800-8820</strong></a></span></p>
+      </div>
+      <div class="index_bottom_content_center fl">
+        <div class="weinxin_img fl">
+          <img src="images/weixin.png"/>
+          <p>礼拜五官方微信</p>
+        </div>
+        <div class="app_img fl">
+          <img src="images/app.png "/>
+          <p>礼拜五APP</p>
+        </div>
+      </div>
+      <div class="index_bottom_content_right fl">
+        <ul class="fl">
+          <li><h3>关于礼拜五</h3></li>
+          <li><a href="##">新用户注册</a></li>
+          <li><a href="##">在线下单</a></li>
+          <li><a href="##">支付方式</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>配送说明</h3></li>
+          <li><a href="##">运费说明</a></li>
+          <li><a href="##">配送方式</a></li>
+          <li><a href="##">发票说明</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>售后服务</h3></li>
+          <li><a href="##">退换货说明</a></li>
+          <li><a href="##">服务保障承诺</a></li>
+          <li><a href="##">验货与签收</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>加盟礼拜五</h3></li>
+          <li><a href="##">加盟条款</a></li>
+          <li><a href="##">公司简介</a></li>
+          <li><a href="##">服务协议</a></li>
+        </ul>
+      </div>
+      </div>
+      
+      
+      <!--页面结尾-->
+      <div class="index_bottom_footer">
+        <p><span>版权所有 © 礼拜五</span>保留所有权利   | 沪ICP备12042163</p>
+        <p><span>礼拜五</span>纵享品质</p>
+      </div>
+    </div>
+  </body>
+
+</html>

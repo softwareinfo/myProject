@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>美食详情</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+	<div class="warp" style="background:#e3bf9d">
+		<!-- 轮播 -->
+		<div class="slideWarp">
+			<div id="slideBox" class="slideBox">
+				<div class="bd">
+					<ul>
+						<li>
+							<a class="pic" href="#"><img src="images/img4.jpg" /></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img5.jpg"/></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img1.jpg"/></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img1.jpg"/></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="hd">
+					<ul></ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+				slideCell:"#slideBox",
+				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+				autoPage:true,//自动分页
+				autoPlay:true //自动播放
+				});
+			</script>
+			<div class="slideTitle">栖江南餐厅</div>
+		</div>
+		
+		<!-- 轮播 -->
+
+		<ul class="viewList foodTxt">
+			<li>
+				<div class="viewTitle rcmd clearfix">
+					<p>推荐指数：</p>
+                    <ul class="cmtStar clearfix">
+                        <li class="star"></li>
+                        <li class="star"></li>
+                        <li class="star"></li>
+                        <li class="star"></li>
+                        <li class="star"></li>
+                    </ul>
+				</div>
+				<div class="viewIntro">
+					<div class="inner">
+						<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+		<div class="restaurant">
+			<h2>推荐餐厅</h2>
+			<ul class="foodList">
+				<li class="li clearfix"><a href="hotelDetail.html">
+					<img src="images/img3.jpg"/>
+					<div class="footInfo">
+						<p class="foodName">桂花米酒</p>
+						<div class="foodRcmd clearfix">
+							<p class="rcmdTit">推荐指数：</p>
+			                <ul class="cmtStar clearfix">
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                </ul>
+						</div>
+					</div>
+				</a></li>
+				<li class="li active clearfix"><a href="hotelDetail.html">
+					<img src="images/img3.jpg"/>
+					<div class="footInfo">
+						<p class="foodName">桂花米酒</p>
+						<div class="foodRcmd clearfix">
+							<p class="rcmdTit">推荐指数：</p>
+			                <ul class="cmtStar clearfix">
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                    <li class="star"></li>
+			                </ul>
+						</div>
+					</div>
+				</a></li>
+			</ul>
+		</div>
+		
+		<!-- footer -->
+		<footer>
+			<p>技术支持：中景通（武汉）信息科技有限公司</p>
+		</footer>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>景点详情</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lity.min.css">
+    <script src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+	<div class="warp" style="background:#e3bf9d">
+		<!-- 轮播 -->
+		<div class="slideWarp">
+			<div id="slideBox" class="slideBox">
+				<div class="bd">
+					<ul>
+						<li>
+							<div class="pic videoLink">
+								<img src="images/img5.jpg"/>
+								<a class="videoPlayBtn" href="http://player.youku.com/embed/XMTg2ODkzODYzMg==" data-lity>视频播放</a>
+							</div>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img1.jpg"/></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img1.jpg"/></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img1.jpg"/></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="hd">
+					<ul></ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+				slideCell:"#slideBox",
+				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+				autoPage:true,//自动分页
+				autoPlay:true //自动播放
+				});
+			</script>
+			<div class="slideTitle">赤壁古战场</div>
+		</div>
+		<!-- 轮播 -->
+
+		<div class="scene">
+			<ul class="clearfix">
+				<li><a href="javascript:;">
+					<img src="images/icon4.png" alt="">
+					<p>全景</p>
+				</a></li>
+				<li><a href="foodList.html">
+					<img src="images/icon5.png" alt="">
+					<p>吃</p>
+				</a></li>
+				<li><a href="foodList.html">
+					<img src="images/icon1.png" alt="">
+					<p>住</p>
+				</a></li>
+				<li><a href="javascript:;" class="disa">
+					<img src="images/icon2.png" alt="">
+					<p>娱</p>
+				</a></li>
+				<li><a href="###">
+					<img src="images/icon3.png" alt="">
+					<p>购</p>
+				</a></li>
+			</ul>
+		</div>
+
+		<div class="voiceGuid clearfix">
+			<div class="voice">
+				<audio src="audio/test.mp3" id="audio" preload></audio>
+				<div class="audioState audioPause" id="audio_btn"></div>
+			</div>
+			<p class="voiceTime">00:00</p>
+			<p class="voiceTag">语音导游</p>
+		</div>
+
+		<div class="viewList scenicInfo">
+			<div class="viewTitle rcmd clearfix">
+				<h2>国家4A级景区</h2>
+				<p>点评：我国古代七大战役唯一尚存原貌的古战场，尽览古昔三国风流人物。</p>
+				<p class="rcmdTit">推荐指数：</p>
+                <ul class="cmtStar clearfix">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                </ul>
+			</div>
+			<div class="viewIntro">
+				<div class="inner">
+					<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="viewAddr clearfix">
+			<div class="left">
+				<p>地址：湖北省赤壁市赤壁赤壁赤壁</p>
+			</div>
+			<div class="right">
+				<ul class="clearfix">
+					<li><a href="###">
+						<img src="images/location.png">
+						<a href="">到这去</a>
+					</a></li>
+					<li><a href="###">
+						<img src="images/tell.png">
+						<a href="tel:">打电话</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="viewInfoTab" class="viewInfoTab">
+			<div class="hd">
+				<ul>
+					<li><a href="javascript:void(0)">门票</a></li>
+					<li><a href="javascript:void(0)">交通</a></li>
+					<li><a href="javascript:void(0)">贴士</a></li>
+					<li><a href="javascript:void(0)">开放时间</a></li>
+				</ul>
+			</div>
+			<div class="bd" id="viewInfoTabBd"><!-- 添加id，js用到 -->
+				<div class="cont"><!-- 高度自适应需添加外层 -->
+					<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+				</div>
+				<div class="cont">
+					<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+				</div>
+				<div class="cont">
+					<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+				</div>
+				<div class="cont">
+					<p>赤壁古战场位于湖北省东南部的赤壁市西北，是国家4A级景区。“二龙争战决雌雄，赤壁楼船扫地空，烈火张天照云海，周瑜于此破曹公。”唐朝伟大诗人李白诗中咏叹的“赤壁”就是今天雄伟壮观的赤壁古战场。其主要景观有：赤壁摩崖石刻、周瑜塑像、拜风台、凤雏庵、翼江亭、望江亭、赤壁大战陈列馆、赤壁碑廊、千年银杏、三国雕塑园等数十处。历史连绵不断，山水历经沧桑；遗台故垒、掩翳榛莽；陵台迭变，风烟犹存。</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			TouchSlide( { 
+				slideCell:"#viewInfoTab",
+				endFun:function(i){ //高度自适应
+					var bd = document.getElementById("viewInfoTabBd");
+					bd.parentNode.style.height = bd.children[i].children[0].offsetHeight+"px";
+					if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+				}
+			} );
+		</script>
+
+		<div class="hotView">
+			<h2>热门景点</h2>
+			<ul class="hotViewList clearfix">
+				<li class="active"><a href="###">陆水湖</a></li>
+				<li><a href="###">太乙温泉</a></li>
+			</ul>
+		</div>
+
+		<!-- footer -->
+		<footer>
+			<p>技术支持：中景通（武汉）信息科技有限公司</p>
+		</footer>
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/lity.min.js"></script>
+	<script type="text/javascript">
+		var audio = document.getElementById('audio');
+
+		//播放暂停
+		function playPause()
+		{ 
+			if (audio.paused){
+				audio.play(); 
+			  	$(".audioState").addClass('audioPlay').removeClass('audioPause');
+			} else {
+				audio.pause(); 
+				$(".audioState").addClass('audioPause').removeClass('audioPlay');
+			}  
+		} 
+
+		//将秒数转为00:00格式
+	  	function timeToStr(time) {
+			 var m = 0,
+			  s = 0,
+			  _m = '00',
+			  _s = '00';
+			 time = Math.floor(time % 3600);
+			 m = Math.floor(time / 60);
+			 s = Math.floor(time % 60);
+			 _s = s < 10 ? '0' + s : s + '';
+			 _m = m < 10 ? '0' + m : m + '';
+			 return _m + ":" + _s;
+	 	}
+
+	 	function updateTime(){
+	 		var t=parseInt(audio.currentTime);
+			var timeDefault = parseInt(audio.duration);	
+			$('.voiceTime').text(timeToStr(t));
+	 	}
+
+		$(function(){
+			$('#audio_btn').click(function(){
+				playPause();
+
+				updateTime();
+				//触发播放事件
+				setInterval(function(){
+					updateTime();
+				},1000);
+			});
+
+		});
+	</script>
+</body>
+</html>

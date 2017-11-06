@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>订单提交成功</title>
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script src="js/layer.js"></script>
+    <link rel="stylesheet" href="css/layer.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" href="css/mall_Friday.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="index_title">
+        <div class="index_title_box clearfix">
+          <div class="index_title_box_city fl">
+            <!--切换城市-->
+            <div class="control-label">所在城市：<span class="select_now">北京朝阳区</span><i></i></div>
+            <div class="control-group" style="display:none;">
+              <div class="advice">建议您的收货地址：<span>哈密市伊州区</span></div>
+              <div class="controls">
+                <select name="location_p" id="location_p"></select> <span>省</span>
+                <select name="location_c" id="location_c"></select> <span>市</span>
+                <select name="location_a" id="location_a"></select> <span>区</span>
+                <script src="js/region_select.js"></script>
+                <script type="text/javascript">
+                  new PCAS('location_p', 'location_c', 'location_a', '广东省', '', '');
+                </script>
+              </div>
+            </div>
+          </div>
+          <!--顶部详情-->
+           <div class="index_title_box_right  fr">
+            <ul>
+              <li class="fl">您好，<span>17701269859</span>
+               <a href="wxt_account-password_logging.html ">退出 </a>
+                
+              </li>
+              <li class="fl">
+                <a href="my_order.html ">我的订单</a>
+              </li>
+              <li class="fl">
+                <a href="my_message.html">我的消息</a>
+              </li>
+              <li class="fl">
+                <a href="merchant.html">我是商家</a>
+              </li>
+              <li class="fl"><i></i>
+                <a href="tel:400-800-8820">400-800-8820</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="affirm_bdb">
+      <div class="submitOrder_hd">
+        <span class="submitOrder_hd_logo"><a href="index.html"><img src="images/logo.png"/></a></span>
+        <ul>
+          <li>我的购物车</li>
+          <li class="submitOrder_hd_arrows">></li>
+          <li>确认订单信息</li>
+          <li class="submitOrder_hd_arrows">></li>
+          <li>订单提交成功</li>
+        </ul>
+      </div>
+      </div>
+      <div class="submitOrder_bd">
+        <div class="submitOrder_bd_hint">
+          <div><img src="images/s_affirm.png" /></div>
+          <p>订单已提交，请于24小时内完成支付<span>（逾期订单将被取消）</span></p>
+        </div>
+        <p class="submitOrder_bd_site"><span></span>送货至： 但小兵 北京 北京市 昌平区 天通苑明天第一城4号楼101 固定电话010-21541589</p>
+        <div class="submitOrder_bd_pay">
+          <div>
+            <p class="submitOrder_bd_pay_money">应付金额：<span class="submitOrder_bd_pay_num">165.90</span>（在线支付）</p> <span class="submitOrder_bd_pay_form">订单编号：425954156947</span></div>
+          <span class="submitOrder_bd_pay_terrace">支付平台</span>
+          <ul>
+            <li>
+              <label class=" submitOrder_bd_pay_label">
+                <input type="radio" class=" submitOrder_bd_pay_radio" checked="checked" name="radio">
+                <span class="submitOrder_bd_pay_radioInput" style="border: 1px solid #1D76c7;"></span><img src="images/s_alipay.png" />
+              </label>
+            </li>  
+            <li>
+              <label class=" submitOrder_bd_pay_label">
+                <input type="radio" class=" submitOrder_bd_pay_radio" name="radio">
+                <span class="submitOrder_bd_pay_radioInput"></span><img src="images/s_weixi.png" />
+              </label>
+              
+            </li>
+            <li>
+              <label class=" submitOrder_bd_pay_label">
+                <input type="radio" class=" submitOrder_bd_pay_radio" name="radio">
+                <span class="submitOrder_bd_pay_radioInput"></span><img src="images/s_yinlian.png" />
+              </label>
+              
+            </li>
+            <li>
+              <label class=" submitOrder_bd_pay_label">
+                <input type="radio" class=" submitOrder_bd_pay_radio" name="radio">
+                <span class="submitOrder_bd_pay_radioInput"></span><img src="images/s_yue.png" />
+              </label>
+              
+            </li>
+          </ul>
+        </div>
+        <div class="submitOrder_bd_Pics">
+          <span class="submitOrder_bd_Pics_left">
+            <p>使用电脑支付</p>
+            <img src="images/s_pcpay.png"/>
+            <a href="payment.html">立即支付</a>
+          </span>
+          <span class="submitOrder_bd_Pics_or">或</span>
+          <span class="submitOrder_bd_Pics_right">
+            
+            <p>使用支付宝钱包扫一扫支付</p>
+            <img src="images/s_alipayma.png"/>
+          </span>
+        </div>
+        <div class="submitOrder_bd_Pics">
+          <span class="submitOrder_bd_Pics_left_one">
+            <img src="images/s_saoyisao.png"/>
+          </span>
+          <span class="submitOrder_bd_Pics_or"><img src="images/s_boder.png"/></span>
+          <span class="submitOrder_bd_Pics_right">
+            <p>使用微信扫一扫付款</p>
+            <img src="images/s_weixinsys.png"/>
+          </span>
+        </div>
+      
+      </div>
+      <!--底部内容--> 
+      <div class="index_bottom_banner clearfix">
+        <ul class="bottom_banner">
+          <li class="guarantee fl"><i></i><span>优鲜保障</span><span class="index_line"></span></li>
+          <li class="monitoring fl"><i></i><span>全程监控</span><span class="index_line"></span></li>
+          <li class="preference fl"><i></i><span>礼拜五特惠</span><span class="index_line"></span></li>
+          <li class="direct_supply fl"><i></i><span>基地直供</span><span class="index_line"></span></li>
+          <li class="delivery fl"><i></i><span>准时送达</span></li>
+        </ul>
+      </div>
+      <div class="index_bottom_content clearfix">
+      <div class="index_bottom_content_left fl">
+        <div class="logo_img"><img src="images/logo.png"/></div>
+        <p><span>服务时间：08:00-22:00</span><span><i></i><a href="tel:400-800-8820"><strong>400-800-8820</strong></a></span></p>
+      </div>
+      <div class="index_bottom_content_center fl">
+        <div class="weinxin_img fl">
+          <img src="images/weixin.png"/>
+          <p>礼拜五官方微信</p>
+        </div>
+        <div class="app_img fl">
+          <img src="images/app.png "/>
+          <p>礼拜五APP</p>
+        </div>
+      </div>
+      <div class="index_bottom_content_right fl">
+        <ul class="fl">
+          <li><h3>关于礼拜五</h3></li>
+          <li><a href="##">新用户注册</a></li>
+          <li><a href="##">在线下单</a></li>
+          <li><a href="##">支付方式</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>配送说明</h3></li>
+          <li><a href="##">运费说明</a></li>
+          <li><a href="##">配送方式</a></li>
+          <li><a href="##">发票说明</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>售后服务</h3></li>
+          <li><a href="##">退换货说明</a></li>
+          <li><a href="##">服务保障承诺</a></li>
+          <li><a href="##">验货与签收</a></li>
+        </ul>
+        <ul class="fl">
+          <li><h3>加盟礼拜五</h3></li>
+          <li><a href="##">加盟条款</a></li>
+          <li><a href="##">公司简介</a></li>
+          <li><a href="##">服务协议</a></li>
+        </ul>
+      </div>
+      </div>
+      
+      
+      <!--页面结尾-->
+      <div class="index_bottom_footer">
+        <p><span>版权所有 © 礼拜五</span>保留所有权利   | 沪ICP备12042163</p>
+        <p><span>礼拜五</span>纵享品质</p>
+      </div>
+      </div>
+  </body>
+
+</html>

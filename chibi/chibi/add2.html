@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>慧游赤壁</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>.dropload-down{text-align:center;padding-bottom: 0.5rem;}</style>
+</head>
+<body style="background:#f8ede0">
+    <div class="warp">
+    	<div class="searchWarp">
+    		<p class="inpWarp"><input type="text" class="inp"/><a href="javascript:;">搜索</a></p>
+    	</div>
+
+    	<div class="sltWarp" id="sltWarp">
+    		<ul class="sltMenu clearfix">
+    			<li>赤壁</li>
+    			<li>美景</li>
+    		</ul>
+    		<div class="sltSubMenu">
+    			<ul class="clearfix">
+    				<li><a href="###">美景</a></li>
+    				<li><a href="###">酒店</a></li>
+    				<li><a href="###">美食</a></li>
+    				<li><a href="###">购买</a></li>
+    				<li><a href="###">娱乐</a></li>
+    				<li><a href="###">知识</a></li>
+    				<li><a href="###">路线</a></li>
+    				<li><a href="###">厕所</a></li>
+    				<li><a href="###">导游</a></li>
+    			</ul>
+    		</div>
+    	</div>
+
+    	<div class="srcViewList">
+    		<ul class="lists">
+    			<!--<li>
+    				<img src="images/view1.jpg" alt="view">
+    				<div class="tagGroup">
+    					<span class="blue">线路</span>
+    					<span class="blue">全景地图</span>
+    					<span class="blue">语音导览</span>
+    					<span class="grey">4A</span>
+    				</div>
+    				<div class="srcViewTxt">
+    					<h2>龙佑温泉度假村</h2>
+    					<p>龙佑温泉度假村龙佑温泉度假村龙佑温泉度假村</p>
+    				</div>
+    			</li>
+    			<li>
+    				<img src="images/view1.jpg" alt="view">
+    				<div class="tagGroup">
+    					<span class="blue">线路</span>
+    					<span class="blue">全景地图</span>
+    					<span class="blue">语音导览</span>
+    					<span class="grey">4A</span>
+    				</div>
+    				<div class="srcViewTxt">
+    					<h2>龙佑温泉度假村</h2>
+    					<p>龙佑温泉度假村龙佑温泉度假村龙佑温泉度假村</p>
+    				</div>
+    			</li>
+    			<li>
+    				<img src="images/view1.jpg" alt="view">
+    				<div class="tagGroup">
+    					<span class="blue">线路</span>
+    					<span class="blue">全景地图</span>
+    					<span class="blue">语音导览</span>
+    					<span class="grey">4A</span>
+    				</div>
+    				<div class="srcViewTxt">
+    					<h2>龙佑温泉度假村</h2>
+    					<p>龙佑温泉度假村龙佑温泉度假村龙佑温泉度假村</p>
+    				</div>
+    			</li>
+    			<li>
+    				<img src="images/view1.jpg" alt="view">
+    				<div class="tagGroup">
+    					<span class="blue">线路</span>
+    					<span class="blue">全景地图</span>
+    					<span class="blue">语音导览</span>
+    					<span class="grey">4A</span>
+    				</div>
+    				<div class="srcViewTxt">
+    					<h2>龙佑温泉度假村</h2>
+    					<p>龙佑温泉度假村龙佑温泉度假村龙佑温泉度假村</p>
+    				</div>
+    			</li>-->
+    		</ul>
+    	</div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/dropload.min.js"></script>
+    <script>
+    	$(function(){
+		    var counter = 0;
+		    // 每页展示4个
+		    var num = 3;
+		    var pageStart = 0,pageEnd = 0;
+
+		    // dropload
+		    $('.srcViewList').dropload({
+		        scrollArea : window,
+		        loadDownFn : function(me){
+		            $.ajax({
+		                type: 'GET',
+		                url: 'json/more.json',
+		                dataType: 'json',
+		                success: function(data){
+		                    var result = '';
+		                    var tagResult = '';
+		                    counter++;
+		                    pageEnd = num * counter;
+		                    pageStart = pageEnd - num;
+
+		                    for(var i = pageStart; i < pageEnd; i++){
+		                    	tagResult = '';
+
+		       //              	for(var j = 0; j < data.lists[i].length; j++){
+									// tagResult +=  '<span class="blue">'+ data.lists[i].tag[j] +'</span>';
+		       //              	}
+               tagResult ='<span class="yellow">'+ data.lists[i].tag1+'</span>'+'<span class="red">'+ data.lists[i].tag2+'</span>'+'<span class="orange">'+ data.lists[i].tag3+'</span>'
+		                        result +=   '<li>'
+		                                        +'<img src="'+data.lists[i].pic+'" alt="">'
+		                                        +'<div class="tagGroup">'
+		                                        + tagResult
+		                                        +'<span class="grey">'+ data.lists[i].level +'</span>'
+		                                        +'</div>'
+		                                        +'<div class="srcViewTxt">'
+		                                        +'<h2>'+data.lists[i].title+'</h2>'
+		                                        +'<p>'+data.lists[i].txt+'</p>'
+		                                        +'</div>'
+		                                    +'</li>';
+		                        if((i + 1) >= data.lists.length){
+		                            // 锁定
+		                            me.lock();
+		                            // 无数据
+		                            me.noData();
+		                            break;
+		                        }
+		                    }
+		                    // 为了测试，延迟1秒加载
+		                    setTimeout(function(){
+		                        $('.lists').append(result);
+		                        // 每次数据加载完，必须重置
+		                        me.resetload();
+		                        //tagResult = '';
+		                    },1000);
+
+		                   	$('.srcViewList li').each(function(){
+		                   		console.log(1);
+		                   		if($(this).find('.tagGroup span').html() == 'undefined'){
+		                   			$(this).find('.tagGroup span').remove();
+		                   		}
+		                   	});
+		                },
+		                error: function(xhr, type){
+		                    alert('Ajax error!');
+		                    // 即使加载出错，也得重置
+		                    me.resetload();
+		                }
+		            });
+		        }
+		    });
+		});
+    </script>
+</body>
+</html>
